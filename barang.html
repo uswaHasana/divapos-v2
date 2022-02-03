@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="AdminLTE/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-  
 <div class="wrapper">
 
   <!-- Preloader -->
@@ -24,7 +23,7 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-primary navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -55,10 +54,12 @@
           </form>
         </div>
       </li>
+
+      <!-- Messages Dropdown Menu -->
     </ul>
   </nav>
+  <!-- /.navbar -->
 
-      
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -73,7 +74,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
-                <a href="./dashboard.html" class="nav-link active">
+                <a href="./dashboard.html" class="nav-link">
                   <i class="fa fa-home"></i>
                   <p>Dashboard</p>
                 </a>
@@ -87,7 +88,7 @@
                 </a>
                 <ul class="nav nav-treeview" style="display: none;">
                   <li class="nav-item">
-                    <a href="barang.html" class="nav-link">
+                    <a href="barang.html" class="nav-link active">
                       <i class="fa fa-fw fa-cubes"></i>
                       <p> Barang</p>
                     </a>
@@ -132,7 +133,7 @@
               <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="ion ion-bag"></i>
+                  <i class="fa fa-shopping-bag"></i>
                   <p>
                     Penjualan 
                     <i class="fas fa-angle-left right"></i>
@@ -247,345 +248,155 @@
                   <p>Hak Akses</p>
                 </a>
               </li>
+        </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
   </aside>
 
-
+  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-      <div class="row mb-2">
-        <div class="col-sm-6">
-          </div>
-        </div>
-      </div>
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Barang</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
     </div>
+    <!-- /.content-header -->
 
-<section class="content">
+    <!-- Main content -->
+    <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-        <div class="col-md-15">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">Barang</h3>
+                  <h3 class="card-title">DataTable with default features</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-
-                  <p>
-                <a href="#" class="btn btn-success btn-sm" id="new"><i class="fa fa-plus-square"></i> Tambah
-                </a>
-                <a href="#" class="btn btn-primary btn-sm" id="import"><i class="fa fa-upload"></i> Import Data</a>
-                <a href="#" class="btn btn-success btn-sm" id="excel"><i class="fas fa-file-excel"></i></i> Excel</a>
-                <a href="#" class="btn btn-warning btn-sm" id="refresh"><i class="ion ion sync-outline"></i> Refresh</a>
-                <a href="#" class="btn btn-warning btn-sm" id="stokLimit"><i class="fa fa-refresh"></i> Stok Limit</a>
-                <a href="#" class="btn btn-warning btn-sm" id="stokExpired"><i class="fa fa-refresh"></i> Expired</a>
-                <a href="#" class="btn btn-danger btn-sm" id="delBarang"><i class="fa fa-trash"></i> Kosongkan</a>
-            </p>
-            <div class="col-sm-6">
-  <div id="dataTable_filter" class="dataTables_filter">
-    <label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="dataTable">
-    </label>
-  </div>
-</div>
-                  <div id="dataTable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-                    <div class="row">
-                      <div class="col-sm-6">
-                      </div>
-
-                      
-                      <!-- <div class="col-sm-6">
-                      <div id="dataTable_filter" class="dataTables_filter">
-                        <label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="dataTable">
-                         </label>
-                         </div>
-                        </div>
-                              </div> -->
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <div class="dataTables_scroll">
-                          <div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;">
-                            <div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 1353.23px; padding-right: 0px;">
-                              <table class="table table-bordered table-hover dataTable no-footer" width="100%" cellspacing="0" role="grid" style="margin-left: 0px; width: 1353.23px;">
-                                <thead>
-                    <tr role="row">
-                      <th style="width: 40.4531px;" class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending">Action</th>
-                      <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 71.0312px;" aria-label="Kode: activate to sort column ascending">Kode</th>
-                      <th style="width: 127.156px;" class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="
-                            Nama&amp;nbsp;Barang&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-                        : activate to sort column ascending">
-                            Nama&nbsp;Barang&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        </th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 67.9219px;" aria-label="Harga&amp;nbsp;Beli&amp;nbsp;: activate to sort column ascending">Harga&nbsp;Beli&nbsp;</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 70.0938px;" aria-label="Harga&amp;nbsp;Jual&amp;nbsp;: activate to sort column ascending">Harga&nbsp;Jual&nbsp;</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 28.1719px;" aria-label="Stok: activate to sort column ascending">Stok</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 41.6719px;" aria-label="Terjual: activate to sort column ascending">Terjual</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 43.3438px;" aria-label="Satuan: activate to sort column ascending">Satuan</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 52.7344px;" aria-label="Kategori: activate to sort column ascending">Kategori</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 41.1875px;" aria-label="Lokasi: activate to sort column ascending">Lokasi</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 39.25px;" aria-label="Warna: activate to sort column ascending">Warna</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 44.7969px;" aria-label="Ukuran: activate to sort column ascending">Ukuran</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 37.5781px;" aria-label="Merek: activate to sort column ascending">Merek</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 47.6875px;" aria-label="Expired: activate to sort column ascending">Expired</th><th class="sorting_desc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 14.1562px;" aria-sort="descending" aria-label="ID: activate to sort column ascending">ID</th>
-                      </tr>
-                </thead>
-              </table>
-            </div>
-          </div>
-          <div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%; max-height: 46vh;">
-            <table class="table table-bordered table-hover dataTable no-footer" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;"><thead>
-                    <tr role="row" style="height: 0px;">
-                      <th style="width: 40.4531px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" class="sorting" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending">
-                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">Action</div>
-                      </th>
-                      <th class="sorting" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 71.0312px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Kode: activate to sort column ascending">
-                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">Kode</div>
-                      </th>
-                      <th style="width: 127.156px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" class="sorting" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="
-                            Nama&amp;nbsp;Barang&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-                        : activate to sort column ascending">
-                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">
-                            Nama&nbsp;Barang&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
-                      </th>
-                      <th class="sorting" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 67.9219px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Harga&amp;nbsp;Beli&amp;nbsp;: activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Harga&nbsp;Beli&nbsp;</div>
-                      </th>
-                      <th class="sorting" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 70.0938px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Harga&amp;nbsp;Jual&amp;nbsp;: activate to sort column ascending">
-                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">Harga&nbsp;Jual&nbsp;</div>
-                      </th>
-                      <th class="sorting" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 28.1719px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Stok: activate to sort column ascending">
-                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">Stok</div>
-                      </th>
-                      <th class="sorting" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 41.6719px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Terjual: activate to sort column ascending">
-                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">Terjual</div>
-                      </th>
-                      <th class="sorting" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 43.3438px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Satuan: activate to sort column ascending">
-                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">Satuan</div>
-                      </th>
-                      <th class="sorting" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 52.7344px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Kategori: activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Kategori</div>
-                      </th>
-                      <th class="sorting" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 41.1875px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Lokasi: activate to sort column ascending">
-                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">Lokasi</div>
-                      </th>
-                      <th class="sorting" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 39.25px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Warna: activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Warna</div>
-                      </th>
-                      <th class="sorting" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 44.7969px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Ukuran: activate to sort column ascending">
-                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">Ukuran</div>
-                      </th>
-                      <th class="sorting" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 37.5781px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Merek: activate to sort column ascending">
-                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">Merek</div>
-                      </th>
-                      <th class="sorting" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 47.6875px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Expired: activate to sort column ascending">
-                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">Expired</div>
-                      </th>
-                      <th class="sorting_desc" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 14.1562px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-sort="descending" aria-label="ID: activate to sort column ascending">
-                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">ID</div>
-                      </th>
-                    </tr>
-                </thead>
-                
-            <tbody>
-              <tr role="row" class="odd">
-                <td>
-                  <div style="width:60px">
-                    <button class="btn btn-default btn-xs" id="edit">
-                      <i class="fa fa-pencil-square-o">
-                      </i>
-                    </button>
-                     <button class="btn btn-default btn-xs" id="delete">
-                      <i class="fa fa-trash-o">
-                      </i>
-                    </button>
-                  </div>
-                </td>
-                <td>8994171101289</td>
-                <td>Luwak white cofee</td>
-                <td>1,000 </td>
-                <td>5,000 </td>
-                <td>88</td>
-                <td>12</td>
-                <td>  
-                </td>
-                <td>Minuman</td>
-                <td>
-                </td>
-                <td>  
-                </td>
-                <td>
-                </td>
-                <td>      
-                </td>
-                <td>
-                </td>
-                <td class="sorting_1">12322</td>
-              </tr>
-              <tr role="row" class="even">
-                <td><div style="width:60px">
-                  <button class="btn btn-default btn-xs" id="edit">
-                    <i class="fa fa-pencil-square-o"></i>
-                  </button>
-                   <button class="btn btn-default btn-xs" id="delete">
-                    <i class="fa fa-trash-o">
-                    </i>
-                  </button>
-                </div>
-              </td>
-              <td>43014517</td>
-              <td>Jamu Promil</td>
-              <td>10,000 </td>
-              <td>20,000 </td>
-              <td>32</td>
-              <td>18</td>
-              <td>PCS</td>
-              <td>baju</td>
-              <td>  
-              </td>
-              <td>   
-              </td>
-              <td>
-              </td>
-              <td>  
-              </td>
-              <td> 
-              </td>
-              <td class="sorting_1">12321</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-5">
-    <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Showing 1 to 2 of 2 entries</div>
-  </div>
-  <div class="col-sm-7">
-    <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
-      <ul class="pagination">
-        <li class="paginate_button previous disabled" id="dataTable_previous">
-          <a href="#" aria-controls="dataTable" data-dt-idx="0" tabindex="0">Previous</a>
-        </li>
-        <li class="paginate_button active">
-          <a href="#" aria-controls="dataTable" data-dt-idx="1" tabindex="0">1</a>
-        </li>
-        <li class="paginate_button next disabled" id="dataTable_next">
-          <a href="#" aria-controls="dataTable" data-dt-idx="2" tabindex="0">Next</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="row">
-  <div class="col-sm-6">
-  </div>
-
-
-
-  <!-- <div class="col-sm-6">
-    <div id="dataTable_filter" class="dataTables_filter">
-      <label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="dataTable">
-      </label>
-    </div>
-  </div>
-</div> -->
-            <!-- <table id="example1" class="table table-bordered table-striped">
+                    
+                    <p>
+                        <a href="#" class="btn btn-primary" onClick="tambah()"> <i class="fa fa-edit"></i>  Tambah</a>
+                        <a href="#" class="btn btn-success"> <i class="fa fa-edit"></i>  Import Data</a>
+                        <a href="#" class="btn btn-success"> <i class="fa far fa-file-excel-o"></i>  Export Excel</a>
+                        <a href="#" class="btn btn-danger"> <i class="fa fa-trash"></i>  Kosongkan</a>
+                    </p>
+                  <table id="example1" class="table table-bordered table-striped">
                     <thead>
                     <tr>
                       <th>Action</th>
                       <th>Kode</th>
                       <th>Nama Barang</th>
-                      <th>Harga Beli</th>
+                      <th>Harga beli</th>
                       <th>Harga Jual</th>
                       <th>Stok</th>
                       <th>Terjual</th>
                       <th>Satuan</th>
                       <th>Kategori</th>
-                      <th>Berat</th>
+                      <th>Lokasi</th>
+                      <th>Warna</th>
+                      <th>Ukuran</th>
+                      <th>Merek</th>
                       <th>Expired</th>
-                      <th>ID</th>
+                      <th>Id</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                       <td>Trident</td>
-                      <td>Internet
-                        Explorer 4.0
-                      </td>
-                      <td>Win 95+</td>
-                      <td> 4</td>
-                      <td>X</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
                     </tr>
                     <tr>
                       <td>Trident</td>
-                      <td>Internet
-                        Explorer 5.0
-                      </td>
-                      <td>Win 95+</td>
-                      <td>5</td>
-                      <td>C</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
                     </tr>
                     <tr>
                       <td>Trident</td>
-                      <td>Internet
-                        Explorer 5.5
-                      </td>
-                      <td>Win 95+</td>
-                      <td>5.5</td>
-                      <td>A</td>
-                    </tr>
-                    <tr>
                       <td>Trident</td>
-                      <td>Internet
-                        Explorer 6
-                      </td>
-                      <td>Win 98+</td>
-                      <td>6</td>
-                      <td>A</td>
-                    </tr>
-                    <tr>
                       <td>Trident</td>
-                      <td>Internet Explorer 7</td>
-                      <td>Win XP SP2+</td>
-                      <td>7</td>
-                      <td>A</td>
-                    </tr>
-                    <tr>
                       <td>Trident</td>
-                      <td>AOL browser (AOL desktop)</td>
-                      <td>Win XP</td>
-                      <td>6</td>
-                      <td>A</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
                     </tr>
-                    <tr>
-                      <td>Gecko</td>
-                      <td>Firefox 1.0</td>
-                      <td>Win 98+ / OSX.2+</td>
-                      <td>1.7</td>
-                      <td>A</td>
-                    </tr>
-                    <tr>
-                      <td>Gecko</td>
-                      <td>Firefox 1.5</td>
-                      <td>Win 98+ / OSX.2+</td>
-                      <td>1.8</td>
-                      <td>A</td>
-                    </tr>
-                    </tfoot>
+                    </tbody>
                   </table>
                 </div>
-                 /.card-body
+                <!-- /.card-body -->
               </div>
-               /.card 
+              <!-- /.card -->
         </div>
-        </div> -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          <!-- /.Left col -->
+          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          <section class="col-lg-5 connectedSortable">
 
-    <!-- /.content-header -->
+ 
+            <!-- /.card -->
+          </section>
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.2.0-rc
+    </div>
+  </footer>
+
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -607,6 +418,11 @@
 <!-- AdminLTE for demo purposes -->
 <script src="AdminLTE/dist/js/demo.js"></script>
 <script>
+
+  function tambah(){
+
+    alert()
+  }
   $(function () {
     $("#example1").DataTable({
       "responsive": true,
