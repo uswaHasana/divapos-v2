@@ -13,6 +13,16 @@
   <link rel="stylesheet" href="AdminLTE/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="AdminLTE/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="text.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -23,7 +33,7 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-primary navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -141,13 +151,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/examples/login.html" class="nav-link">
+                    <a href="perperiode.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Per Periode</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/examples/register.html" class="nav-link">
+                    <a href="perbarang.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Per Barang</p>
                     </a>
@@ -248,6 +258,12 @@
                   <p>Hak Akses</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="login.html" class="nav-link">
+                  <i class="fa fa-sign-out-alt"></i>
+                  <p>Keluar</p>
+                </a>
+              </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -278,18 +294,303 @@
         <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">
+                <!-- <div class="card-header">
                   <h3 class="card-title">DataTable with default features</h3>
-                </div>
+                </div> -->
                 <!-- /.card-header -->
                 <div class="card-body">
-                    
+    
                     <p>
-                        <a href="#" class="btn btn-primary" onClick="tambah()"> <i class="fa fa-edit"></i>  Tambah</a>
-                        <a href="#" class="btn btn-success"> <i class="fa fa-edit"></i>  Import Data</a>
-                        <a href="#" class="btn btn-success"> <i class="fa far fa-file-excel-o"></i>  Export Excel</a>
-                        <a href="#" class="btn btn-danger"> <i class="fa fa-trash"></i>  Kosongkan</a>
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#modal-lg" >
+                         <i class="fa fa-edit"></i>  Tambah</a>
+                        <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#modal-info" data-target="#modal-lg"> <i class="fa fa-upload"></i>  Import Data</a>
+                        <a href="#" class="btn btn-success"> <i class="fa fa-file-excel"></i> Export Excel</a>
+                        <a href="#" class="btn btn-info" onclick="window.location.reload();" id="Refresh"><i class="fa fa-undo"></i> Refresh </a>
+                        <a href="#" class="btn btn-secondary" onclick="window.location.reload();"><i class="fa fa-list-alt"></i> Stok Limit </a>
+                        <a href="#" class="btn btn-success" onclick="window.location.reload();"><i class="fa fa-exclamation-triangle"></i> Expired </a>
+                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#modal-success" data-target="#modal-lg"> <i class="fa fa-trash"></i>  Kosongkan</a>
                     </p>
+                    <div class="modal fade" id="modal-lg">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Data Barang</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            
+<div class="card card-info">
+              <div class="card-header">
+                <h3 class="card-title">Standart</h3>
+              </div>
+              <form class="form-horizontal">
+                <div class="card-body">
+                  <div class="form-group row">
+                    <label for="input" class="col-lg-3 col-form-label form-control-label">Kode barang</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" id="kodebarang" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="input" class="col-lg-3 col-form-label form-control-label">Nama barang</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" id="namabarang" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                      <label for="input" class="col-lg-3 col-form-label form-control-label">Kategori Barang</label>
+                      <div class="col-sm-4">
+                        <select id="kategori_barang" name="kategori_barang" class="form-control" onchange="pilihKategori(event)">
+                            <option value=""></option>
+                            <option>Baju</option>
+                            <option>Sepatu</option>
+                            <option>Tas</option>
+                            <option>Sembako</option>
+                            <option>Elektronik</option>
+                            <option>Makanan</option>
+                            <option>Minuman</option>
+                        </select>
+                        <!-- <span class="input-group-btn">
+          <button class="btn btn-default" type="button" title="edit kategori" onclick="showKategori()">
+           <i class="fa fa-edit"></i> 
+         </button>
+       </span> -->
+                  </div>
+                </div>
+                  <div class="form-group row">
+                    <label for="input" class="col-lg-3 col-form-label form-control-label">Satuan</label>
+                    <div class="col-sm-4">
+                      <select select id="satuan" name="satuan" class="form-control" onchange="pilihSatuan(event)">
+                        <option value=""></option>
+                        <option>KAJ</option>
+                        <option>PCS</option>
+                        <option>Dus</option>
+                        <option>1/2</option>
+                        <option>1/4</option>
+                        <option>toples</option>
+                        <option>Pack</option>
+                        <option>Liter</option>
+                        <option>Kg</option>
+                      </select>
+                    </div>
+              </div>
+            <!-- </div> -->
+                  <div class="form-group row">
+                    <label for="input" class="col-lg-3 col-form-label form-control-label">Harga Jual</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" id="hargajual" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="input" class="col-lg-3 col-form-label form-control-label">Harga Beli</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" id="hargabeli" placeholder="">
+                    </div>
+                  </div>
+                </div>
+              
+                </div>
+                    <div class="input-group" style="margin-top:5px">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Stok Sekarang</button></span>
+                           <input class="form-control" type="number" id="qty" value="1" style="width:100px;text-align:center">
+                    </div>
+                    <div class="input-group" style="margin-top:5px">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Stok Minimal</button></span>
+                           <input class="form-control" type="number" id="qty" value="1" style="width:100px;text-align:center">
+                    </div>
+                    </form> 
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-info" id="saveEdit">Simpan</button>
+                  <button type="reset" class="btn btn-success" id="reset" class="reset"> Reset</button>
+                  <button type="button" class="btn btn-default float-right" class="close" data-dismiss="modal" aria-label="Close">Tutup</button>
+                </div>
+                <!-- /.card-footer -->
+              </form>
+            </div>
+            <!-- /.card -->
+
+          </div>
+      </div>
+    </div>
+
+      <div class="modal fade" id="modal-info" id="modal-lg">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content bg-info">
+            <div class="modal-header">
+              <h4 class="modal-title">Import Data Barang</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+             <div class="well">
+                    <form id="uploadForm" action="" method="post">
+                      <br>
+                        <input name="fileExcel" type="file" class="inputFile" id="fileExcel">
+                        <input name="fileTable" type="text" id="fileTable" value="daftar_barang" style="display:none">
+                        <br>
+                        <input type="submit" value="Upload Excel " class="btn btn-primary btn-sm" style="margin-top:3px">
+                        <div id="data"></div>
+                    </form>
+                </div>
+                <br>
+                <a href="files/template_barang.xls" class="btn btn-success">
+                  <i class="fa fa-file-excel-o"></i>
+                    template_barang.xls</a>
+                    <!-- <i class="fa fa-file-excel-o"></i> -->
+                    <h4>Panduan import data dari Excel : </h4>
+                <ol>
+                        <li>Download file excel <b>template_barang.xls</b> kemudian edit sesuai data Anda</li>
+                        <li>Jika file Excel sudah selesai diedit, upload file tersebut pada form di atas.</li>
+                        <li>klik Upload Excel untuk mulai mengupload</li>
+                        <li>Proses upload selesai</li>
+                </ol>
+      <!-- /.modal -->
+                    <!-- </div> -->
+                  <!-- </div> -->
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-default btn-sm" type="button" data-dismiss="modal">
+                  <i class="fa fa-window-close" aria-hidden="true"></i> Tutup</button>
+
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- /.modal -->
+
+      <div class="modal fade" id="modal-success" id="modal-lg">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header flex-column">
+                <div class="icon-box">
+                    <i class="material-icons">&#xE5CD;</i>
+                </div>
+                <h4 class="modal-title w-100">Anda ingin menghapus semua data barang?</h4>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
+            </div>
+            <div class="modal-body">
+                <p> Data yang terhapus tidak bisa dikembalikan</p>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-default float-right" class="close" data-dismiss="modal" aria-label="Close">Cancel</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+                <style>
+    body {
+        font-family: 'Varela Round', sans-serif;
+    }
+
+    .modal-confirm {
+        color: #636363;
+        width: 400px;
+    }
+
+    .modal-confirm .modal-content {
+        padding: 20px;
+        border-radius: 5px;
+        border: none;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .modal-confirm .modal-header {
+        border-bottom: none;
+        position: relative;
+    }
+
+    .modal-confirm h4 {
+        text-align: center;
+        font-size: 26px;
+        margin: 30px 0 -10px;
+    }
+
+    .modal-confirm .close {
+        position: absolute;
+        top: -5px;
+        right: -2px;
+    }
+
+    .modal-confirm .modal-body {
+        color: #999;
+    }
+
+    .modal-confirm .modal-footer {
+        border: none;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 13px;
+        padding: 10px 15px 25px;
+    }
+
+    .modal-confirm .modal-footer a {
+        color: #999;
+    }
+
+    .modal-confirm .icon-box {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        border-radius: 50%;
+        z-index: 9;
+        text-align: center;
+        border: 3px solid #f15e5e;
+    }
+
+    .modal-confirm .icon-box i {
+        color: #f15e5e;
+        font-size: 46px;
+        display: inline-block;
+        margin-top: 13px;
+    }
+
+    .modal-confirm .btn,
+    .modal-confirm .btn:active {
+        color: #fff;
+        border-radius: 4px;
+        background: #60c7c1;
+        text-decoration: none;
+        transition: all 0.4s;
+        line-height: normal;
+        min-width: 120px;
+        border: none;
+        min-height: 40px;
+        border-radius: 3px;
+        margin: 0 5px;
+    }
+
+    .modal-confirm .btn-secondary {
+        background: #c1c1c1;
+    }
+
+    .modal-confirm .btn-secondary:hover,
+    .modal-confirm .btn-secondary:focus {
+        background: #a8a8a8;
+    }
+
+    .modal-confirm .btn-danger {
+        background: #f15e5e;
+    }
+
+    .modal-confirm .btn-danger:hover,
+    .modal-confirm .btn-danger:focus {
+        background: #ee3535;
+    }
+
+    .trigger-btn {
+        display: inline-block;
+        margin: 100px auto;
+    }
+</style>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                     <tr>
@@ -311,6 +612,7 @@
                     </tr>
                     </thead>
                     <tbody>
+
                     <tr>
                       <td>Trident</td>
                       <td>Trident</td>
@@ -362,6 +664,9 @@
                       <td>Trident</td>
                       <td>Trident</td>
                     </tr>
+    
+                              </tr>
+                               <?php } ?>
                     </tbody>
                   </table>
                 </div>
@@ -389,13 +694,6 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.2.0-rc
-    </div>
-  </footer>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -417,6 +715,7 @@
 <script src="AdminLTE/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="AdminLTE/dist/js/demo.js"></script>
+<script type="text.css"></script>
 <script>
 
   function tambah(){
