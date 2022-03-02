@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Per Periode</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="AdminLTE/plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="AdminLTE/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="AdminLTE/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="AdminLTE/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="text.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="AdminLTE/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-primary navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="AdminLTE/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">DIVAPOS</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+                <a href="./dashboard.html" class="nav-link">
+                  <i class="fa fa-home"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-desktop"></i>
+                  <p>Master
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                  <li class="nav-item">
+                    <a href="barang.html" class="nav-link active">
+                      <i class="fa fa-fw fa-cubes"></i>
+                      <p> Barang</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="barcode.html" class="nav-link">
+                      <i class="fa fa-fw fa-barcode"></i>
+                      <p>Barcode</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="supplier.html" class="nav-link">
+                      <i class="fa fa-fw fa-address-card"></i>
+                      <p>Supplier</p>
+                    </a>
+                  <li class="nav-item">
+                    <a href="pelanggan.html" class="nav-link">
+                      <i class="fa fa-fw fa-address-book"></i>
+                      <p>Pelanggan</p>
+                    </a>
+                    <li class="nav-item">
+                      <a href="stokopname.html" class="nav-link">
+                        <i class="fa fa-fw fa-cube"></i>
+                        <p>Stok Opname</p>
+                      </a>
+                    </li>
+                  </li>
+                </ul>
+              <li class="nav-item">
+                <a href="kasir.html" class="nav-link">
+                  <i class="fa fa-th"></i>
+                  <p>Kasir</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-server" aria-hidden="true"></i>
+                  <p>Transaksi
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+              <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-shopping-bag"></i>
+                  <p>
+                    Penjualan 
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="perperiode.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Per Periode</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="perbarang.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Per Barang</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+                  <li class="nav-item">
+                      <a href="pembelian.html" class="nav-link">
+                        <i class="fa fa-fw fa-shopping-basket"></i>
+                        <p>Pembelian</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="piutang.html" class="nav-link">
+                        <i class="fa fa-fw fa-calendar"></i>
+                        <p>Piutang</p>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="hutang.html" class="nav-link">
+                      <i class="fa fa-calculator"></i>
+                        <p>Hutang </p>
+                    </a>
+                  </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-sticky-note"></i>
+                  <p>
+                    Return
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/examples/login.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Penjualan</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/register.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Pembelian</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-list-alt" aria-hidden="true"></i>
+                  <p>Laporan
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                <li class="nav-item">
+                    <a href="kas.html" class="nav-link">
+                      <i class="fa fa-book fa-fw"></i>
+                        <p>Kas </p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="labarugi.html" class="nav-link">
+                      <i class="fa fa-fax"></i>
+                        <p>Laba rugi </p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="grafik.html" class="nav-link">
+                      <i class="ion ion-stats-bars"></i>
+                        <p>Grafik </p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="cetak.html" class="nav-link">
+                      <i class="fa fa-print"></i>
+                        <p>Cetak </p>
+                      </a>
+                    </li>
+                </li>
+              </ul>
+                <li class="nav-item">
+                <a href="pengguna.html" class="nav-link">
+                  <i class="fa fa-user"></i>
+                  <p>Pengguna</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pengaturan.html" class="nav-link">
+                  <i class="fa fa-cog"></i>
+                  <p>Pengaturan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="hakakses.html" class="nav-link">
+                  <i class="fa fa-lock"></i>
+                  <p>Hak Akses</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="login.html" class="nav-link">
+                  <i class="fa fa-sign-out-alt"></i>
+                  <p>Keluar</p>
+                </a>
+              </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+   <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0"></h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+
+    <div class="modal fade" id="modalPenjualan" tabindex="-1" role="dialog" aria-labelledby="EditPostLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="display:none">
+                <h5 class="modal-title" id="EditPostLabel">Transaksi Penjualan</h5>
+            </div>
+            <div class="modal-body">
+                <hr>
+                <div id="showTablePenjualan"></div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary" href="#" id="hapusTransaksi"><i class="fa fa-trash" aria-hidden="true"></i>
+                    Hapus </a>
+
+                <a class="btn btn-primary" onclick="jQuery('#printArea').print()" href="#" id="printPenjualan"><i class="fa fa-print" aria-hidden="true"></i> Print</a>
+                <a class="btn btn-primary" href="#" id="cetakStruk"><i class="fa fa-print" aria-hidden="true"></i> Cetak Struk</a>
+                <button class="btn btn-danger" type="button" data-dismiss="modal"><i class="fa fa-window-close" aria-hidden="true"></i> Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="modal " id="modalPrint" tabindex="-1" role="dialog" aria-labelledby="EditPostLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header modal-header-primary">
+                <h5 class="modal-title" id="EditPostLabel"><i class="fa fa-address-card-o " aria-hidden="true"></i>
+                    Transaksi </h5>
+            </div>
+            <div class="modal-body">
+                <div style="overflow-y: auto; height:350px; ">
+                    <div id="dataPrint"></div>
+                    <iframe id="frame" src="" width="100%" height="300" style="border:none"> </iframe>
+                </div>
+
+                <center>
+                    <div class="well well-sm" style="display:block">
+                        Ukuran Kertas <select id="ukuran">
+                            <option value="58">58 mm</option>
+                            <option value="80">80 mm</option>
+                            <option value="A4">A4 Responsive</option>
+                            <option value="dotmatrix">Dot Matrix</option>
+                        </select>
+                        <div style="display:none">
+                            Font <select id="font_family">
+                                <option>Arial</option>
+                                <option>Verdana</option>
+                                <option>Tahoma</option>
+                                <option>Courier</option>
+                                <option>Trebuchet MS</option>
+                            </select>
+                            <select id="font_size">
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option selected="">11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                            </select>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary btn-sm" href="#" id="printKasir"><i class="fa fa-print" aria-hidden="true"></i> Cetak Struk</a>
+                    <button class="btn btn-danger" type="button" data-dismiss="modal"><i class="fa fa-window-close" aria-hidden="true"></i> Batal</button>
+
+                </center>
+                <div style="display:none">
+                    <iframe src="#" name="frame" id="printFrame"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-14">
+    <div class="card bg-info">
+        <div class="card-body">
+            <div class="col-md-9">
+
+                <table class="table bg-info">
+                    <tbody><tr>
+                        <td>
+                            <select id="user_id" class="form-control">
+                                <option value="">-Semua Sales-</option>
+                                                                <option value="1">admin</option>
+                                                                <option value="12">kasir</option>
+                                                                <option value="13">marketing</option>
+                                                                <option value="14">operator</option>
+                                                                <option value="17">sales</option>
+                                                                <option value="18">indi/s1</option>
+                                                                <option value="19">indi/s2</option>
+                                                                <option value="20">yasona/s1</option>
+                                                                <option value="21">yasona/s2</option>
+                                                                <option value="22">haekhal/s1</option>
+                                                                <option value="23">haekhal/s2</option>
+                                                                <option value="24">laras/s1</option>
+                                                                <option value="25">laras/s2</option>
+                                                            </select>
+                        </td>
+                        <td>
+                            <select id="pelanggan_id" class="form-control">
+                                <option value="">-Semua Pelanggan-</option>
+                                                                <option value="41">Umum</option>
+                                                                <option value="42">test</option>
+                                                            </select>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-success" style="width:100%" id="filter1"><i class="fa fa-search"></i> Filter</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Awal</td>
+                        <td>
+                            <input autocomplete="off" title="tanggal transaksi" class="form-control " type="date" id="startDate" data-language="en" value="2022-02-25">
+                        </td>
+                        <td>
+                            <select id="status" class="form-control">
+                                <option value="">Semua Transaksi</option>
+                                <option value="tunai">Tunai</option>
+                                <option value="kredit">Non Tunai</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Akhir</td>
+                        <td>
+                            <input autocomplete="off" title="tanggal transaksi" class="form-control " type="date" id="endDate" data-language="en" value="2022-02-25">
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+
+                </tbody></table>
+            </div>
+
+            <div class="col-md-6">
+                <table class="table bg-info">
+                    <tbody><tr>
+                    <td><p id="title">TOTAL PENJUALAN</p></td>
+                    <td><div id="totalPenjualan"><h1>10,263,000 </h1></div></td>
+
+                    </tr>
+                </tbody>
+              </table>
+                <a href="#" id="pjHarian" class="btn btn-light btn-sm"> Hari Ini</a>
+                <a href="#" id="pjBulanan" class="btn btn-light btn-sm"> Bulan Ini</a>
+                <a href="#" id="pjTahunan" class="btn btn-light btn-sm"> Tahun Ini</a>
+                <a href="#" id="pjSemua" class="btn btn-light btn-sm"> Semua</a>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+<div class="content-wrapper">
+    <div class="content-header bg-info">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Penjualan</h1>
+          </div>
+          <div class="col-sm-6">
+          </div>
+        </div>
+      </div>
+    </div>
+
+<table id="example1" class="table table-bordered table-striped">
+  <button type="button" class="btn btn-danger" aria-control="dataTable" href="#">Copy</button>
+                    <button type="button" class="btn btn-danger" href="#">CSV</button>
+                    <button type="button" class="btn btn-danger" href="#">Excel</button>
+                    <button type="button" class="btn btn-danger" href="#">PDF</button>                
+                  </div></div> 
+                  <br>
+  <div class="btn-group">
+  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Tanggal</th>
+                      <th>Faktur</th>
+                      <th>Pemasukan</th>
+                      <th>Harga Jual</th>
+                      <th>Stok</th>
+                      <th>Terjual</th>
+                      <th>Satuan</th>
+                      <th>Kategori</th>
+                      <th>Lokasi</th>
+                      <th>Warna</th>
+                      <th>Ukuran</th>
+                      <th>Merek</th>
+                      <th>Expired</th>
+                      <th>Id</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                    </tr>
+                    <tr>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                    </tr>
+                    <tr>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                      <td>Trident</td>
+                    </tr>
+    
+                              </tr>
+                               <?php } ?>
+                    </tbody>
+                  </table>
+                </div>
+              </table>
+            </div>
+<div class="row">
+          <!-- Left col -->
+          <!-- /.Left col -->
+          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          <section class="col-lg-5 connectedSortable">
+
+ 
+            <!-- /.card -->
+          </section>
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!-- jQuery -->
+<script src="AdminLTE/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="AdminLTE/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="AdminLTE/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="AdminLTE/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="AdminLTE/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="AdminLTE/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="AdminLTE/dist/js/demo.js"></script>
+<script type="text.css"></script>
+<script>
+ 
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+
+</body>
+</html>

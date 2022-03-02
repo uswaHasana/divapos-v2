@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kasir</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="AdminLTE/plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="AdminLTE/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="AdminLTE/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="AdminLTE/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="AdminLTE/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-primary navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+       <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-nav" href="login.html" role="button">
+          <i class="<i class="fa fa-sign-out-alt"></i></i>
+        </a>
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="AdminLTE/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">DIVAPOS</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+                <a href="./dashboard.html" class="nav-link">
+                  <i class="fa fa-home"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-desktop"></i>
+                  <p>Master
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                  <li class="nav-item">
+                    <a href="barang.html" class="nav-link active">
+                      <i class="fa fa-fw fa-cubes"></i>
+                      <p> Barang</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="barcode.html" class="nav-link">
+                      <i class="fa fa-fw fa-barcode"></i>
+                      <p>Barcode</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="supplier.html" class="nav-link">
+                      <i class="fa fa-fw fa-address-card"></i>
+                      <p>Supplier</p>
+                    </a>
+                  <li class="nav-item">
+                    <a href="pelanggan.html" class="nav-link">
+                      <i class="fa fa-fw fa-address-book"></i>
+                      <p>Pelanggan</p>
+                    </a>
+                    <li class="nav-item">
+                      <a href="stokopname.html" class="nav-link">
+                        <i class="fa fa-fw fa-cube"></i>
+                        <p>Stok Opname</p>
+                      </a>
+                    </li>
+                  </li>
+                </ul>
+              <li class="nav-item">
+                <a href="kasir.html" class="nav-link">
+                  <i class="fa fa-th"></i>
+                  <p>Kasir</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-server" aria-hidden="true"></i>
+                  <p>Transaksi
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+              <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-shopping-bag"></i>
+                  <p>
+                    Penjualan 
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="perperiode.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Per Periode</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="perbarang.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Per Barang</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+                  <li class="nav-item">
+                      <a href="pembelian.html" class="nav-link">
+                        <i class="fa fa-fw fa-shopping-basket"></i>
+                        <p>Pembelian</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="piutang.html" class="nav-link">
+                        <i class="fa fa-fw fa-calendar"></i>
+                        <p>Piutang</p>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="hutang.html" class="nav-link">
+                      <i class="fa fa-calculator"></i>
+                        <p>Hutang </p>
+                    </a>
+                  </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-sticky-note"></i>
+                  <p>
+                    Return
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/examples/login.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Penjualan</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/register.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Pembelian</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-list-alt" aria-hidden="true"></i>
+                  <p>Laporan
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                <li class="nav-item">
+                    <a href="kas.html" class="nav-link">
+                      <i class="fa fa-book fa-fw"></i>
+                        <p>Kas </p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="labarugi.html" class="nav-link">
+                      <i class="fa fa-fax"></i>
+                        <p>Laba rugi </p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="grafik.html" class="nav-link">
+                      <i class="ion ion-stats-bars"></i>
+                        <p>Grafik </p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="cetak.html" class="nav-link">
+                      <i class="fa fa-print"></i>
+                        <p>Cetak </p>
+                      </a>
+                    </li>
+                </li>
+              </ul>
+                <li class="nav-item">
+                <a href="pengguna.html" class="nav-link">
+                  <i class="fa fa-user"></i>
+                  <p>Pengguna</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pengaturan.html" class="nav-link">
+                  <i class="fa fa-cog"></i>
+                  <p>Pengaturan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="hakakses.html" class="nav-link">
+                  <i class="fa fa-lock"></i>
+                  <p>Hak Akses</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="login.html" class="nav-link">
+                  <i class="fa fa-sign-out-alt"></i>
+                  <p>Keluar</p>
+                </a>
+              </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Kasir</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <div class="col-md-7">
+    <div class="box box-solid">
+        <div class="box-body" id="grid-mode">
+            <div class="row">
+                <div class="col-md-12 " style="display:">
+                    <form id="addCartForm" action="" method="post" style="display:">
+                        <div class="input-group" style="display:">
+                            <span class="input-group-btn">
+                            <button style="background:white;border: 1px solid #ccc" class="btn " type="button">
+                            <i class="fa  fa-barcode"></i> 
+                            </button></span>
+                            <input class="form-control" type="text" id="kodeBarang" autofocus="" title="Cari Barang" name="kode_barang" autocomplete="OFF" placeholder="Cari Barang atau Scan Barcode (F1)">
+                            <span class="input-group-btn" style="display:none">
+                                <button class="btn " type="button" id="showBarang" title="cari barang atau tekan F1"><i class="fa  fa-search" aria-hidden="true"></i> [F1]</button>
+                            </span>
+                        </div>
+                        <small style="display:none">Tekan 
+                          <b style="color:red">TAB
+                          </b> untuk memilih tabel barang.
+                           <b style="color:black">ATAS BAWAH</b>
+                            untuk memilih barang.
+                             <b style="color:blue">ENTER</b>
+                              untuk menginput barang.</small>
+
+                        <span style="display:none">
+                            <input type="hidden" name="addCart" value="kasir_penjualan">
+                            <input type="hidden" name="user_id" value="" placeholder="user_id">
+                            <input type="hidden" name="faktur" value="PJ.220224104333.0919" placeholder="faktur">
+
+                            <input style="display:none;margin-top:5px" class="form-control" type="text" id="idBarang">
+                            <input style="display:block;margin-top:5px" class="form-control" type="text" id="namaBarang" readonly="" placeholder="Nama Barang">
+                            <input style="display:block;margin-top:5px" class="form-control" type="text" id="hargaJual" readonly="" placeholder="Harga">
+                            <input style="display:block;margin-top:5px;display:none" class="form-control" type="text" id="stokBarang" readonly="" placeholder="Stok">
+                            <div class="input-group" style="margin-top:5px">
+                                <span class="input-group-btn">
+                                  <button class="btn " type="button" style="width:111px">Jumlah </button>
+                                </span>
+                                <input style="text-align:center" id="qty" name="qty" type="number" value="1" class="form-control " title="jumlah barang">
+                                <span class="input-group-btn">
+                                    <input type="submit" value="Tambah" class="btn btn-primary" style="display:none">
+                                    <span class="input-group-btn">
+                                    <button class="btn btn-warning" type="button" id="addCart">
+                                      <i class="fa  fa-check-square-o" aria-hidden="true"></i>
+                                            Tambah</button></span>
+                                </span>
+                        
+                </div>
+                
+            </span></form></div>
+
+            <div class="col-md-6" style="display:none">
+            <div class="input-group">
+                    <span class="input-group-addon"><i class="fa  fa-search"></i></span>
+
+                    <input class="form-control" type="text" id="cariBarang" autofocus="" title="Cari Barang" name="kode_barang" autocomplete="OFF" placeholder="Search (F2)">
+                    </div>
+
+                <div class="input-group" style="display:">
+                    <span class="input-group-btn" style="display:none">
+                        <button class="btn " type="button" id="showBarang" title="cari barang atau tekan F1"><i class="fa  fa-search" aria-hidden="true"></i> [F1]</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="box-body">
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <div style="position: absolute; height: 1px; width: 0px; overflow: hidden;">
+                    <input type="text" tabindex="0">
+                  </div>
+                  <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                  <br>
+  <tr role="row">
+    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 60px;">Kode</th>
+    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 90px;">Nama_Produk</th>
+    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 73px;">Harga_Jual</th>
+    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 30px;">Stok</th>
+    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 60px;">#</th>
+  </tr>
+                </thead>
+      <tbody>
+      <tr role="row" class="odd">
+        <td>37754948</td>
+        <td>tes</td>
+        <td>4,000 </td>
+        <td>11</td>
+        <td class="">
+          <span class="btn btn-secondary btn-sm addBarang" id="addBarang">
+            <i class="fa fa-check-square-o"></i> pilih </span>
+          </td>
+        </tr>
+        <?php } ?>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+<br>
+  <div class="box box-primary">
+              <div class="box-header with-border">
+            <div class="nav-tabs-custom">
+                    <div class="col-md-14">
+            <div class="card card-default">
+              <div class="card-body">
+                <div class="callout callout-muted"> 
+                  F1 : Pencarian | F2 : Barcode | END : Bayar
+            <br>
+            <small style="display:">Tekan 
+              <b style="color:red">TAB</b> untuk memilih tabel barang. 
+              <b style="color:black">ATAS BAWAH</b> untuk memilih barang.
+             <b style="color:blue">ENTER</b> untuk menginput barang.</small> 
+                </div>
+                </div>
+              </div>
+        </div>
+        <div class="well well-sm">
+           
+
+        </div>
+    </div>
+</div>
+ 
+ <div class="col-md-9">
+    <div class="box box-solid">
+        <div class="box-body">
+
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                <div class="row">
+                <div class="col-sm-7"></div>
+                <div class="col-sm-7"></div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+                <div class="dataTables_scroll">
+                <div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+                <div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 394px; padding-right: 0px;">
+                <table class="table table-bordered table-hover dataTable no-footer" width="100%" cellspacing="0" role="grid" style="margin-left: 0px; width: 394px;">
+                <thead>
+                        <tr role="row">
+                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 122.281px;">Nama</th>
+                        <th style="width: 79.5156px;" class="sorting_disabled" rowspan="1" colspan="1">Qty</th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 93.4219px;">Sub</th>
+                        <th style="width: 29.7812px;" class="sorting_disabled" rowspan="1" colspan="1"></th>
+                        </tr>
+                    </thead>
+                    </table>
+                    </div>
+                    </div>
+                    <div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%; height: 45vh;">
+                    <table class="table table-bordered table-hover dataTable no-footer" id="dataTable" width="100%" cellspacing="0" role="grid" style="width: 100%;">
+                    <thead>
+                        <tr role="row" style="height: 0px;">
+                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 122.281px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">Nama</div>
+                        </th>
+                        <th style="width: 79.5156px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" class="sorting_disabled" rowspan="1" colspan="1">
+                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">Qty</div>
+                        </th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 93.4219px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">Sub</div>
+                        </th>
+                        <th style="width: 29.7812px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" class="sorting_disabled" rowspan="1" colspan="1">
+                        <div class="dataTables_sizing" style="height:0;overflow:hidden;">
+                        </div>
+                        </th>
+                        </tr>
+                    </thead>
+                    
+                <tbody>
+                <tr class="odd">
+                <td valign="top" colspan="4" class="dataTables_empty">No matching records found</td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-sm-5">
+                </div><div class="col-sm-7">
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-body">
+            <div style="display:block;margin-top:5px">
+                <span id="totalSum_"></span>
+                <span id="SubTotal"><div class="input-group"><span class="input-group-btn"><button class="btn " type="button" style="font-size:20px;">TOTAL  </button></span><input id="totalGrandKasir" style="border:2px solid #ccc;background:#f7f774;width:100%;font-size:25px;text-align:right" readonly="" value="0"></div></span>
+                <span id="totalSumBayar" style="display:none"> <input class="form-control" id="totalBayar" readonly="" value=""></span>
+            </div>
+            <div style="display:none;margin-top:5px">
+                <div class="input-group">
+                    <span class="input-group-btn"><button class="btn " type="button" style="padding-right:50px">Faktur
+                        </button></span>
+                    <input class="form-control" type="text" id="faktur" value="" readonly="">
+                </div>
+            </div>
+
+
+
+            <p class="pull-right">
+                <a href="#" class="btn btn-primary" id="bayarKasir" style="margin-top:10px;width:100%"><i class="fa fa-print"></i> Bayar </a>
+            </p>
+        </div>
+    </div>
+</div>
+    <div class="row">
+          <!-- Left col -->
+          <!-- /.Left col -->
+          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          <section class="col-lg-5 connectedSortable">
+
+ 
+            <!-- /.card -->
+          </section>
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!-- jQuery -->
+<script src="AdminLTE/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="AdminLTE/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="AdminLTE/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="AdminLTE/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="AdminLTE/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="AdminLTE/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="AdminLTE/dist/js/demo.js"></script>
+<script>
+
+  function tambah(){
+
+    alert()
+  }
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pengaturan</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="AdminLTE/plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="AdminLTE/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="AdminLTE/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="AdminLTE/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="text.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="AdminLTE/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-primary navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="AdminLTE/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">DIVAPOS</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+                <a href="./dashboard.html" class="nav-link">
+                  <i class="fa fa-home"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-desktop"></i>
+                  <p>Master
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                  <li class="nav-item">
+                    <a href="barang.html" class="nav-link active">
+                      <i class="fa fa-fw fa-cubes"></i>
+                      <p> Barang</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="barcode.html" class="nav-link">
+                      <i class="fa fa-fw fa-barcode"></i>
+                      <p>Barcode</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="supplier.html" class="nav-link">
+                      <i class="fa fa-fw fa-address-card"></i>
+                      <p>Supplier</p>
+                    </a>
+                  <li class="nav-item">
+                    <a href="pelanggan.html" class="nav-link">
+                      <i class="fa fa-fw fa-address-book"></i>
+                      <p>Pelanggan</p>
+                    </a>
+                    <li class="nav-item">
+                      <a href="stokopname.html" class="nav-link">
+                        <i class="fa fa-fw fa-cube"></i>
+                        <p>Stok Opname</p>
+                      </a>
+                    </li>
+                  </li>
+                </ul>
+              <li class="nav-item">
+                <a href="kasir.html" class="nav-link">
+                  <i class="fa fa-th"></i>
+                  <p>Kasir</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-server" aria-hidden="true"></i>
+                  <p>Transaksi
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+              <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-shopping-bag"></i>
+                  <p>
+                    Penjualan 
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="perperiode.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Per Periode</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="perbarang.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Per Barang</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+                  <li class="nav-item">
+                      <a href="pembelian.html" class="nav-link">
+                        <i class="fa fa-fw fa-shopping-basket"></i>
+                        <p>Pembelian</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="piutang.html" class="nav-link">
+                        <i class="fa fa-fw fa-calendar"></i>
+                        <p>Piutang</p>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="hutang.html" class="nav-link">
+                      <i class="fa fa-calculator"></i>
+                        <p>Hutang </p>
+                    </a>
+                  </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-sticky-note"></i>
+                  <p>
+                    Return
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/examples/login.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Penjualan</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/register.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Pembelian</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-list-alt" aria-hidden="true"></i>
+                  <p>Laporan
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                <li class="nav-item">
+                    <a href="kas.html" class="nav-link">
+                      <i class="fa fa-book fa-fw"></i>
+                        <p>Kas </p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="labarugi.html" class="nav-link">
+                      <i class="fa fa-fax"></i>
+                        <p>Laba rugi </p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="grafik.html" class="nav-link">
+                      <i class="ion ion-stats-bars"></i>
+                        <p>Grafik </p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="cetak.html" class="nav-link">
+                      <i class="fa fa-print"></i>
+                        <p>Cetak </p>
+                      </a>
+                    </li>
+                </li>
+              </ul>
+                <li class="nav-item">
+                <a href="pengguna.html" class="nav-link">
+                  <i class="fa fa-user"></i>
+                  <p>Pengguna</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pengaturan.html" class="nav-link">
+                  <i class="fa fa-cog"></i>
+                  <p>Pengaturan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="hakakses.html" class="nav-link">
+                  <i class="fa fa-lock"></i>
+                  <p>Hak Akses</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="login.html" class="nav-link">
+                  <i class="fa fa-sign-out-alt"></i>
+                  <p>Keluar</p>
+                </a>
+              </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+   <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Pengaturan</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <div class="col-md-8">
+          <!-- Custom Tabs (Pulled to the right) -->
+          <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs ">
+              <div class="card-header with-border">
+              <li class="active"><a href="#general" data-toggle="tab" aria-expanded="false">General&nbsp;&nbsp;</a></li></div>
+              <div class="card-header with-border">
+              <li><a href="#print" data-toggle="tab" aria-expanded="true">Print&nbsp;&nbsp;</a></li></div>
+              <div class="card-header with-border">
+              <li><a href="#modul" data-toggle="tab">Modul&nbsp;&nbsp;</a></li></div>
+              <div class="card-header with-border">
+              <li><a href="#database" data-toggle="tab">Database&nbsp;&nbsp;</a></li></div>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane" id="general">
+                <div class="card">
+                    <div class="card-header ">
+                        <h3 class="card-title"><i class="glyphicon glyphicon-th-list"></i> Pengaturan Toko</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="card-body">
+                    <form id="simpanSetting">
+                        <table class="table">
+                            <tbody><tr>
+                                <td style="width:150px">Nama Toko</td>
+                                <td>:</td>
+                                <td><input class="form-control" id="nama_toko" value="DIVAPOS RETAIL" disabled="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Alamat</td>
+                                <td>:</td>
+                                <td><textarea class="form-control" id="alamat">Jl. Panglima Sudirman 56 Tulungagung</textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>No Telp/HP</td>
+                                <td>:</td>
+                                <td><input class="form-control" id="no_hp" value="085727623875" disabled=""> </td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>:</td>
+                                <td><input class="form-control" id="email" value="minimarket@bhayangkaramart.com" disabled=""> </td>
+                            </tr>
+                            <tr>
+                                <td>Website</td>
+                                <td>:</td>
+                                <td><input class="form-control" id="website" value="http://exrush.com/divapos" disabled="">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <button id="SaveInput" class="btn btn-primary btn-sm pull-right"><i class="fa fa-fw fa-save"></i>
+                            Simpan</button>
+                            </form>
+                    </div>
+                </div>
+              </div>
+
+              <div class="tab-pane active" id="modul">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title"><i class="glyphicon glyphicon-th-list"></i> Modul</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="card-body">
+                <form id="formModul">
+                    <table class="table">
+                        <tbody><tr>
+                            <td style="width:30px"><input type="checkbox" name="voucher" id="voucher" value="1" disabled=""></td>
+                            <td><label for="voucher">Voucher </label><br><small>Aktifkan Voucher saat penjualan, centang untuk mengaktifkan</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:30px"><input type="checkbox" name="pajak" id="pajak" value="1" disabled=""></td>
+                            <td><label for="pajak">Pajak </label><br><small>Aktifkan Pajak saat penjualan, centang untuk mengaktifkan</small></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="ongkir" id="ongkir" value="1" disabled="">
+                            </td>
+                            <td><label for="ongkir">Ongkir </label><br><small>Aktifkan ongkos kirim saat penjualan, centang untuk
+                                    mengaktifkan</small></td>
+                        </tr>
+                    </tbody></table>
+                </form>
+                <button id="SaveModul" class="btn btn-primary btn-sm pull-right"><i class="fa fa-fw fa-save"></i>
+                    Simpan</button>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title"><i class="glyphicon glyphicon-th-list"></i> Tampilan Dashboard</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="card-body">
+                <form id="formDashboard">
+
+                    <table class="table">
+                        <tbody><tr>
+                            <td style="width:30px"><input checked="" type="checkbox" name="dashboard_omset_tahun_ini" id="dashboard_omset_tahun_ini" value="1" disabled=""></td>
+                            <td><label for="dashboard_omset_tahun_ini">Penjualan Tahun ini</label></td>
+                        </tr>
+                        <tr>
+                            <td style="width:30px"><input checked="" type="checkbox" name="dashboard_omset_bulan_ini" id="dashboard_omset_bulan_ini" value="1" disabled=""></td>
+                            <td><label for="dashboard_omset_bulan_ini">Penjualan Bulan Ini</label></td>
+                        </tr>
+                        <tr>
+                            <td style="width:30px"><input checked="" type="checkbox" name="dashboard_laba_tahun_ini" id="dashboard_laba_tahun_ini" value="1" disabled=""></td>
+                            <td><label for="dashboard_laba_tahun_ini">Laba Bulan Ini</label></td>
+                        </tr>
+                        <tr>
+                            <td style="width:30px"><input checked="" type="checkbox" name="dashboard_laba_bulan_ini" id="dashboard_laba_bulan_ini" value="1" disabled=""></td>
+                            <td><label for="dashboard_laba_bulan_ini">Laba Bulan Ini</label></td>
+                        </tr>
+                        <tr>
+                            <td style="width:30px"><input checked="" type="checkbox" name="dashboard_grafik" id="dashboard_grafik" value="1" disabled=""></td>
+                            <td><label for="dashboard_grafik">Grafik</label></td>
+                        </tr>
+                        <tr>
+                            <td style="width:30px"><input checked="" type="checkbox" name="dashboard_barang_terlaris" id="dashboard_barang_terlaris" value="1" disabled=""></td>
+                            <td><label for="dashboard_barang_terlaris">Barang Terlaris</label></td>
+                        </tr>
+                        <tr>
+                            <td style="width:30px"><input checked="" type="checkbox" name="dashboard_barang_expired" id="dashboard_barang_expired" value="1" disabled=""></td>
+                            <td><label for="dashboard_barang_expired">Barang Expired</label></td>
+                        </tr>
+                        <tr>
+                            <td style="width:30px"><input checked="" type="checkbox" name="dashboard_barang_limit" id="dashboard_barang_limit" value="1" disabled=""></td>
+                            <td> <label for="dashboard_barang_limit">Barang Stok Limit</label></td>
+                        </tr>
+                    </tbody></table>
+                </form>
+
+                <button id="saveDashboard" class="btn btn-primary btn-sm pull-right"><i class="fa fa-fw fa-save"></i>
+                    Simpan</button>
+            </div>
+        </div>
+      </div>
+
+
+
+              <div class="tab-pane active" id="print">
+                <div class="card">
+            <div class="card-header">
+                <h3 class="card-title"><i class="glyphicon glyphicon-th-list"></i> Pengaturan Print untuk Nota</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="card-body">
+                <form id="inputPrinter" action="" method="post" style="display:">
+
+                    <table class="table">
+                        <tbody><tr>
+                            <td style="width:150px">Margin Atas</td>
+                            <td>:</td>
+                            <td>
+
+                                <div class="input-group" style="margin-top:5px;width:150px;">
+                                    <input style="text-align:center" id="margin_top" name="margin_top" type="" value="" class="form-control " title="" autocomplete="OFF" disabled="">
+                                    <span class="input-group-addon">mm</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:150px">Margin Kiri</td>
+                            <td>:</td>
+                            <td>
+                                <div class="input-group" style="margin-top:5px;width:150px;">
+                                    <input style="text-align:center" id="margin_left" name="margin_left" type="" value="" class="form-control " title="" autocomplete="OFF" disabled="">
+                                    <span class="input-group-addon">mm</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:150px">Logo</td>
+                            <td>:</td>
+                            <td>
+                                <label><input type="checkbox" id="show_logo" name="show_logo" value="1" disabled=""> Tampilkan </label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width:150px">Tulisan Footer</td>
+                            <td>:</td>
+                            <td>
+                                <textarea style="text-align:" id="tulisan_footer" name="tulisan_footer" class="form-control ">Terima kasih telah berbelanja silakan dangan kembali</textarea>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                    <button id="SavePrinter" class="btn btn-primary btn-sm pull-right"><i class="fa fa-fw fa-save"></i>
+                        Simpan</button>
+
+                    <input type="hidden" name="inputPrinter" value="1" class="btn btn-primary btn-sm pull-right" disabled="">
+                </form>
+            </div>
+        </div>
+
+
+              </div>
+              <!-- /.tab-pane -->
+              <div class="tab-pane" id="database">
+
+              <div class="card">
+            <div class="card-header">
+                <h3 class="card-title"><i class="fa fa-download"></i> Backup Database</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="card-body">
+                <p><a href="db/database.db" class="btn btn-primary">Backup Database SQLITE3</a>
+                                    </p>
+
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title"><i class="fa fa-cloud-upload"></i> Restore Database</h3>
+            </div>
+            <br>
+            <div class="card-body">
+                <div id="loadUploaderRestore"> 
+                  <form id="uploadFormRestore" action="" method="post"> 
+                    <div class="bgColor"> 
+                      <div id="uploadFormLayer"> 
+                       <div id="uploadFormLayer"> 
+                        <input name="getDB" type="text" class="inputFile" id="getDB" value="1" style="display:none"> 
+                         <input name="DBFile" type="file" class="inputFile" id="DBFile"> 
+                         <div id="submitButton">
+                          <input type="submit" value="Upload Database" class="btn btn-primary btn-sm" style="margin-top:3px">  </div>  
+                          <span id="process2" style="display: none;">
+                            <img src="images/system/ajax-loader.gif" style="width:30px"> process..</span> 
+                             </div>
+                              </div>
+
+                              <script>$(document).ready(function(e) { $("#process2").hide(); $("#uploadFormRestore").on('submit', (function(e) { $("#process2").show(); var DBFile = $("#DBFile").val(); if (DBFile == '') {  swal("", "File database masih kosong!").then((value) => {  $('#DBFile').focus();  });  return false; } e.preventDefault(); $.ajax({  url: "data.php",  type: "POST",  data: new FormData(this),  contentType: false,  cache: false,  processData: false,  success: function(data) {  $('#loadUploaderRestore').load('data.php?UploadDB=restore');  swal("", "Database berhasil diupload!").then((value) => {  location.reload();  });  },  error: function() {} }); }));});</script>
+                            </div>
+                          </form>
+                        </div>
+            </div><br>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title"><i class="fa fa-trash"></i> Hapus Database</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="card-body">
+                <div class="alert alert-warning alert-dismissible">
+                    <i class="icon fa fa-warning"></i> Sebelum menghapus database, sebaiknya Anda melakukan backup
+                    database
+                </div>
+                <p><button class="btn btn-danger" id="delBarang">Hapus Semua Data Barang</button></p>
+                <p><button class="btn btn-danger" id="delTransaksi">Hapus Semua Data Transaksi</button></p>
+                <p><button class="btn btn-danger" id="delSupplier">Hapus Semua Data Supplier</button></p>
+                <p><button class="btn btn-danger" id="delPelanggan">Hapus Semua Data Pelanggan</button></p>
+                <p><button class="btn btn-danger" id="resetTerjual">Reset Jumlah Barang Terjual</button></p>
+                <p><button class="btn btn-danger" id="resetStok">Reset Stok Barang</button></p>
+            </div>
+        </div>
+
+    <div class="row">
+          <!-- Left col -->
+          <!-- /.Left col -->
+          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          <section class="col-lg-5 connectedSortable">
+
+ 
+            <!-- /.card -->
+          </section>
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!-- jQuery -->
+<script src="AdminLTE/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384- 
+<script src="AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="AdminLTE/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="AdminLTE/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="AdminLTE/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="AdminLTE/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="AdminLTE/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="AdminLTE/dist/js/demo.js"></script>
+<script type="text.css"></script>
+<script>
+ 
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Supplier</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="AdminLTE/plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="AdminLTE/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="AdminLTE/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="AdminLTE/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="AdminLTE/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-primary navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+       <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-nav" href="login.html" role="button">
+          <i class="<i class="fa fa-sign-out-alt"></i></i>
+        </a>
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="AdminLTE/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">DIVAPOS</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+                <a href="./dashboard.html" class="nav-link">
+                  <i class="fa fa-home"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-desktop"></i>
+                  <p>Master
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                  <li class="nav-item">
+                    <a href="barang.html" class="nav-link active">
+                      <i class="fa fa-fw fa-cubes"></i>
+                      <p> Barang</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="barcode.html" class="nav-link">
+                      <i class="fa fa-fw fa-barcode"></i>
+                      <p>Barcode</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="supplier.html" class="nav-link">
+                      <i class="fa fa-fw fa-address-card"></i>
+                      <p>Supplier</p>
+                    </a>
+                  <li class="nav-item">
+                    <a href="pelanggan.html" class="nav-link">
+                      <i class="fa fa-fw fa-address-book"></i>
+                      <p>Pelanggan</p>
+                    </a>
+                    <li class="nav-item">
+                      <a href="stokopname.html" class="nav-link">
+                        <i class="fa fa-fw fa-cube"></i>
+                        <p>Stok Opname</p>
+                      </a>
+                    </li>
+                  </li>
+                </ul>
+              <li class="nav-item">
+                <a href="kasir.html" class="nav-link">
+                  <i class="fa fa-th"></i>
+                  <p>Kasir</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-server" aria-hidden="true"></i>
+                  <p>Transaksi
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+              <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-shopping-bag"></i>
+                  <p>
+                    Penjualan 
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="perperiode.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Per Periode</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="perbarang.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Per Barang</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+                  <li class="nav-item">
+                      <a href="pembelian.html" class="nav-link">
+                        <i class="fa fa-fw fa-shopping-basket"></i>
+                        <p>Pembelian</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="piutang.html" class="nav-link">
+                        <i class="fa fa-fw fa-calendar"></i>
+                        <p>Piutang</p>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="hutang.html" class="nav-link">
+                      <i class="fa fa-calculator"></i>
+                        <p>Hutang </p>
+                    </a>
+                  </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-sticky-note"></i>
+                  <p>
+                    Return
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/examples/login.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Penjualan</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/register.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Pembelian</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-list-alt" aria-hidden="true"></i>
+                  <p>Laporan
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                <li class="nav-item">
+                    <a href="kas.html" class="nav-link">
+                      <i class="fa fa-book fa-fw"></i>
+                        <p>Kas </p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="labarugi.html" class="nav-link">
+                      <i class="fa fa-fax"></i>
+                        <p>Laba rugi </p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="grafik.html" class="nav-link">
+                      <i class="ion ion-stats-bars"></i>
+                        <p>Grafik </p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="cetak.html" class="nav-link">
+                      <i class="fa fa-print"></i>
+                        <p>Cetak </p>
+                      </a>
+                    </li>
+                </li>
+              </ul>
+                <li class="nav-item">
+                <a href="pengguna.html" class="nav-link">
+                  <i class="fa fa-user"></i>
+                  <p>Pengguna</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pengaturan.html" class="nav-link">
+                  <i class="fa fa-cog"></i>
+                  <p>Pengaturan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="hakakses.html" class="nav-link">
+                  <i class="fa fa-lock"></i>
+                  <p>Hak Akses</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="login.html" class="nav-link">
+                  <i class="fa fa-sign-out-alt"></i>
+                  <p>Keluar</p>
+                </a>
+              </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Supplier</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+              
+                <!-- /.card-body -->
+              <div class="card-body">
+    
+                    <p>
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#modal-lg" >
+                         <i class="fa fa-edit"></i>  Tambah</a>
+                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-info" data-target="#modal-lg"> <i class="fa fa-upload" ></i>  Import Data</a>
+                        <a href="#" class="btn btn-info" onclick="window.location.reload();"><i class="fa fa-undo"></i> Refresh </a> 
+                        <a href="#" class="btn btn-danger"> <i class="fa fa-trash"></i>  Kosongkan</a>
+                        <br>
+                        <div class="btn-group">
+                    <button type="button" class="btn btn-danger" aria-control="dataTable" href="#">Copy</button>
+                    <button type="button" class="btn btn-danger" href="#">CSV</button>
+                    <button type="button" class="btn btn-danger" href="#">Excel</button>
+                    <button type="button" class="btn btn-danger" href="#">PDF</button>
+                    <button type="button" class="btn btn-danger" href="#">Print</button>
+                  </div>
+                    </p>
+
+                    <div class="modal fade" id="modal-lg">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                    <h4 class="modal-title"> Data Supplier</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <!-- <form class="form-horizontal">
+                    <div class="card-body"> -->
+                   <div class="form-group row">
+                      <label for="input" class="col-lg-3 col-form-label form-control-label">Nama Supplier : </label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" id="namabarang" placeholder="">
+                              </div>
+                            </div>
+                  <!-- <form class="form-horizontal">
+                    <div class="card-body"> -->
+                    <div class="form-group row">
+                      <label for="input" class="col-lg-3 col-form-label form-control-label">Alamat : </label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" id="namabarang" placeholder="">
+                              </div>
+                            </div>
+                  <!-- <form class="form-horizontal">
+                    <div class="card-body"> -->
+                    <div class="form-group row">
+                      <label for="input" class="col-lg-3 col-form-label form-control-label">Kota : </label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" id="namabarang" placeholder="">
+                              </div>
+                            </div>
+                 <!--  <form class="form-horizontal">
+                    <div class="card-body"> -->
+                    <div class="form-group row">
+                      <label for="input" class="col-lg-3 col-form-label form-control-label">No. Hp : </label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" id="namabarang" placeholder="">
+                              </div>
+                            </div>
+                  <!-- <form class="form-horizontal">
+                    <div class="card-body"> -->
+                    <div class="form-group row">
+                      <label for="input" class="col-lg-3 col-form-label form-control-label">Email : </label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" id="namabarang" placeholder="">
+                              </div>
+                            </div>
+                  <!-- <form class="form-horizontal">
+                    <div class="card-body"> -->
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-form-label form-control-label">Website : </label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" id="namabarang" placeholder="">
+                              </div>
+                            </div>
+                      <div class="card-footer">
+                  <button type="submit" class="btn btn-info" id="saveEdit">Simpan</button>
+                  <button type="button" class="btn btn-default float-right" class="close" data-dismiss="modal" aria-label="Close">Tutup</button>
+                </div>
+                    </div>
+                  </div>
+                  </div>
+          </div>
+       <!--  </form> -->
+      </div>
+
+          <div class="modal fade" id="modal-info" id="modal-lg">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content bg-info">
+            <div class="modal-header">
+              <h4 class="modal-title">Import Data Supplier
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+             <div class="well">
+                    <form id="uploadForm" action="" method="post">
+                      <br>
+                        <input name="fileExcel" type="file" class="inputFile" id="fileExcel">
+                        <input name="fileTable" type="text" id="fileTable" value="daftar_barang" style="display:none">
+                        <br>
+                        <input type="submit" value="Upload Excel " class="btn btn-primary btn-sm" style="margin-top:3px">
+                        <div id="data"></div>
+                    </form>
+                </div>
+                <br>
+                <a href="files/template_barang.xls" class="btn btn-success">
+                  <i class="fa fa-file-excel-o"></i>
+                    template_supplier.xls</a>
+                    <!-- <i class="fa fa-file-excel-o"></i> -->
+                    <h4>Panduan import data dari Excel : </h4>
+                <ol>
+                        <li>Download file excel <b>template_supplier.xls</b> kemudian edit sesuai data Anda</li>
+                        <li>Jika file Excel sudah selesai diedit, upload file tersebut pada form di atas.</li>
+                        <li>klik Upload Excel untuk mulai mengupload</li>
+                        <li>Proses upload selesai</li>
+                </ol>
+      <!-- /.modal -->
+                    <!-- </div> -->
+                  <!-- </div> -->
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-default btn-sm" type="button" data-dismiss="modal">
+                  <i class="fa fa-window-close" aria-hidden="true"></i> Tutup</button>
+
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                    
+                  <!-- <div class="btn-group">
+                    <button type="button" class="btn btn-danger" aria-control="dataTable" href="#">Copy</button>
+                    <button type="button" class="btn btn-danger" href="#">CSV</button>
+                    <button type="button" class="btn btn-danger" href="#">Excel</button>
+                    <button type="button" class="btn btn-danger" href="#">PDF</button>
+                    <button type="button" class="btn btn-danger" href="#">Print</button>
+                  </div> -->
+
+                    <table id="example1" class="table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Nama Supplier</th>
+                          <th>Alamat</th>
+                          <th>Kota</th>
+                          <th>No HP</th>
+                          <th>Email</th>
+                          <th>Website</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr>
+                          <th>51</th>
+                          <th>Koperasi</th>
+                          <th>  </th>
+                          <th>Tulungagung</th>
+                          <th>08123456789</th>
+                          <th>  </th>
+                          <th>  </th>
+                        </tr>
+
+                      </tr>
+                      <?php } ?>
+                    </tbody>
+                  </table>
+              <!-- /.card -->
+        </div>
+        </div>
+      </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          <!-- /.Left col -->
+          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          <section class="col-lg-5 connectedSortable">
+
+ 
+            <!-- /.card -->
+          </section>
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!-- jQuery -->
+<script src="AdminLTE/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="AdminLTE/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="AdminLTE/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="AdminLTE/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="AdminLTE/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="AdminLTE/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="AdminLTE/dist/js/demo.js"></script>
+<script>
+
+  function tambah(){
+
+    alert()
+  }
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+
+</body>
+</html>
